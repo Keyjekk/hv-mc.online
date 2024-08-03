@@ -57,7 +57,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  border-top: 1vw solid #ffffff;
+  border-top: 0.75vw solid #ffffff;
   padding-top: 4vh;
 }
 
@@ -77,10 +77,12 @@ body{
 }
 
 .btn:hover{
+  background-color: #00be01;
   border-top: 1vw solid #049600;
   border-right: 1vw solid #049600;
   border-bottom: 1vw solid #30ff2b;
   border-left: 1vw solid #30ff2b;
+  color: #f1f1f1;
 }
 
 .btn-disabled{
@@ -96,4 +98,101 @@ body{
   border-bottom: 1vw solid #888888;
   border-left: 1vw solid #888888;
   color: #a4a4a4;
+  position: relative;
+}
+
+.back{
+  position: absolute;
+  top: 1vh;
+  left: 0;
+  z-index: 2;
+  scale: 0.8;
+}
+
+.badge-red{
+  position: absolute;
+  top: -1.75vh;
+  right: -1.75vh;
+  background-color: #ff3657;
+  color: #ffffff;
+  padding: 0.5vh;
+  border-right: 0.5vh solid #ff526e;
+  border-top: 0.5vh solid #ff526e;
+  border-bottom: 0.5vh solid #c61735;
+  border-left: 0.5vh solid #c61735;
+  box-shadow: 0px 0px 1.5vh #ff3657d2;
+}
+
+.bg .logo-players .text{
+  color: #ffffff;
+  font-size: 5vw;
+}
+
+.bg .logo-players{
+  z-index: 2;
+  position: absolute;
+  top: 15vh;
+}
+
+.players{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  z-index: 2;
+  height: 80vh;
+  overflow-y: scroll;
+  position: absolute;
+  bottom: 0;
+  border-radius: 3px;
+}
+
+.players .player-card{
+  display: flex;
+  flex-direction: row;
+  gap: 2vh;
+  justify-content: space-between;
+  border-bottom: 0.75vw solid #fff;
+  padding: 1.25vh;
+  background-color: #ffffff35;
+  backdrop-filter: blur(7px);
+  border-radius: 3px;
+  transition: all .2s;
+}
+
+.players .player-card:hover{
+  backdrop-filter: blur(16px);
+  background-color: #ffffff50;
+}
+
+.players .player-card .profile{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 25vw;
+}
+
+.players .player-card .profile img{
+  width: 20vw;
+  height: 20vw;
+  border-radius: 1.5px;
+}
+
+.players .player-card .profile p{
+  color: #ffffff;
+  font-size: 2vh;
+  width: 25vw;
+}
+
+.players .player-card .info{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1vh;
+  font-size: 2vh;
+  color: #ffffff;
+}
+
+.players .player-card .info .title{
+  opacity: 0.5;
+  font-size: 1.8vh;
 }
